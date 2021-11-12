@@ -1,4 +1,6 @@
 import React from 'react'
+import { SinglePostPage } from './features/posts/SinglePostPage'
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -27,6 +29,7 @@ function App() {
               </React.Fragment>
             )}
           />
+          <Route exact path="/posts/:postID" component={SinglePostPage}/>
           <Redirect to="/" />
         </Switch>
       </div>
