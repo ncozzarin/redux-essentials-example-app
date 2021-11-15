@@ -6,8 +6,8 @@ export const SinglePostPage = ({ match }) => {
   console.log(match)
   const { postId } = match.params
   console.log(match.params)
+  console.log(useSelector(state=>state.posts[0].id))
   console.log(postId)
-  
 
   const post = useSelector(state =>
     state.posts.find(post => post.id === postId)
